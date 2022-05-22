@@ -1,0 +1,41 @@
+@model object
+
+@{
+    ViewBag.Title = "title";
+   
+}
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div id="1"style="float: left">
+    <h1>上傳圖片或檔案</h1>
+    <form method="post" enctype="multipart/form-data" action="/home/UploadImage">
+        <input type="file" name="files"/>
+        <br />
+        <input type="submit" value="Upload" />
+    </form>
+</div>
+<div id="2"style="flex-wrap: wrap">
+    <h1>上傳字串</h1>
+    <form method="post" enctype="multipart/form-data" action="/home/UploadString">
+        <input type="text" name="str"/>
+        <br/>
+        <input type="submit" value="submit"/>
+    </form>
+</div>
+
+<div id="3" style="float: left">
+    <h1>下載資料</h1>
+    <form method="post" enctype="multipart/form-data" action="/home/GetCache">
+        <input type="text" name="plate"/>
+        <br/>
+        <input type="submit" value="submit"/>
+    </form>
+</div>
+<div id="3" style="float:left">
+    <h1>掃描加入linebot</h1>
+    <img src="~/image/933atrdm.png">
+</div>
+
